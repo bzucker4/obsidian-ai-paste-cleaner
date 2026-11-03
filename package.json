@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-ai-paste-cleaner",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Obsidian plugin that cleans markdown pasted from ChatGPT, Claude, Gemini and other AI chats.",
 	"main": "main.js",
 	"type": "module",
@@ -10,7 +10,15 @@
 		"test": "node --import tsx --test tests/*.test.ts",
 		"version": "node version-bump.mjs && git add manifest.json versions.json"
 	},
-	"keywords": ["obsidian", "plugin", "paste", "ai", "chatgpt", "claude", "markdown"],
+	"keywords": [
+		"obsidian",
+		"plugin",
+		"paste",
+		"ai",
+		"chatgpt",
+		"claude",
+		"markdown"
+	],
 	"author": "Brian Zucker",
 	"license": "0BSD",
 	"devDependencies": {

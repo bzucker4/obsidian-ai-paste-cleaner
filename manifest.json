@@ -1,7 +1,7 @@
 {
 	"id": "ai-paste-cleaner",
 	"name": "AI Paste Cleaner",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"minAppVersion": "1.1.0",
 	"description": "Clean markdown pasted from AI chats: fix math delimiters, remove citation markers and copy-button text, normalize lists, and tidy whitespace.",
 	"author": "Brian Zucker",
