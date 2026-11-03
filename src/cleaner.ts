@@ -80,7 +80,7 @@ const FILE_CITATION = /[ \t]*【[^】\n]*】/g;
 // Numeric citations like [1], [1, 2], [1-3] or [1][2]; not links, footnote refs or reference definitions.
 // Matches "fast [1][2].", rejects "[1](https://x.com) or [1]: https://x.com".
 // Try it: https://regex101.com/?regex=%5B%20%5Ct%5D*(%3F%3A%5C%5B%5Cd%7B1%2C3%7D(%3F%3A%5Cs*%5B%2C%E2%80%93-%5D%5Cs*%5Cd%7B1%2C3%7D)*%5C%5D)%2B(%3F!%5B(%5C%5B%3A%5D)&flags=g&testString=fast%20%5B1%5D%5B2%5D.
-const NUMERIC_CITATION = /[ \t]*(?:\[\d{1,3}(?:\s*[,–-]\s*\d{1,3})*\])+(?![(\[:])/g;
+const NUMERIC_CITATION = /[ \t]*(?:\[\d{1,3}(?:\s*[,–-]\s*\d{1,3})*\])+(?![([:])/g;
 
 // A trailing Sources/References/Citations block made only of list items, links or blank lines.
 // Matches "\n\nSources:\n- https://a.com", rejects "\n\nSources: see the docs, then continue writing".
@@ -105,12 +105,12 @@ const COPY_BUTTON_LABEL = /^(copy code|copy|copied!?|edit|run)$/i;
 // Zero-width characters.
 // Matches "a\u200Bb", rejects "ab".
 // Try it: https://regex101.com/?regex=%5B%E2%80%8B-%E2%80%8D%E2%81%A0%EF%BB%BF%5D&flags=g&testString=a%5Cu200Bb
-const ZERO_WIDTH = /[​-‍⁠﻿]/g;
+const ZERO_WIDTH = /[\u200B-\u200D\u2060\uFEFF]/g;
 
 // Non-breaking spaces.
 // Matches "a\u00A0b", rejects "a b".
 // Try it: https://regex101.com/?regex=%5B%C2%A0%E2%80%AF%5D&flags=g&testString=a%5Cu00A0b
-const NBSP = /[  ]/g;
+const NBSP = /[\u00A0\u202F]/g;
 
 // A line ending in exactly two spaces (markdown hard break).
 // Matches "line␣␣", rejects "line␣␣␣".
