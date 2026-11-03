@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-ai-paste-cleaner",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Obsidian plugin that cleans markdown pasted from ChatGPT, Claude, Gemini and other AI chats.",
 	"main": "main.js",
 	"type": "module",
